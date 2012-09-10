@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CLViewController : UIViewController
-
+@interface CLViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+{
+    UITableView *listTableView;
+    NSInteger selectedIndex;
+}
+@property (nonatomic, strong) IBOutlet UITableView *listTableView;
 @end
